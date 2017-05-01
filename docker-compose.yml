@@ -1,0 +1,14 @@
+version: '2'
+services:
+  public:
+    build: ./public
+    ports:
+      - "8000:8000"
+    depends_on:
+      - sum
+      - prod
+  sum:
+    build: ./sum
+
+  prod:
+    build: ./prod
